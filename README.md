@@ -158,6 +158,10 @@ bucket = "test"
 [logging]
 debug = true
 log_level = ""
+
+[sentry]
+dsn = ""
+environment = "dev"
 ```
 
 Environment variables that can be used to override configuration file settings:
@@ -179,6 +183,8 @@ INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__S3__USE_SSL
 INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__S3__BUCKET
 INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__LOGGING__DEBUG
 INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__LOGGING__LOG_DEVEL
+INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__SENTRY__DSN
+INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__SENTRY__ENVIRONMENT
 ```
 
 ## Example output
