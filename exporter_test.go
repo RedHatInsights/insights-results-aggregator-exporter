@@ -401,3 +401,16 @@ func TestConstructIgnoreTableMapTwoTables(t *testing.T) {
 	assert.Contains(t, m, "table1")
 	assert.Contains(t, m, "table2")
 }
+
+func TestGetS3Bucket(t *testing.T) {
+	config := main.ConfigStruct{}
+	assert.Equal(t, "", main.GetS3Bucket(&config))
+
+	testBucketString := "test_bucket"
+	config.S3.Bucket = testBucketString
+	assert.Equal(t, testBucketString, main.GetS3Bucket(&config))
+
+	testBucketPrefixString := "test_prefix"
+	config.S3.Prefix = testBucketPrefixString
+	assert.Equal(t, testBucketPrefixString+"/"+testBucketString, main.GetS3Bucket(&config))
+}

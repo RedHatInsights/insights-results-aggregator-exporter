@@ -41,6 +41,7 @@ var (
 	CheckS3Connection         = checkS3Connection
 	PerformDataExport         = performDataExport
 	ConstructIgnoredTablesMap = constructIgnoredTablesMap
+	GetS3Bucket               = getS3Bucket
 
 	// exported functions from the s3.go source file
 	S3BucketExists  = s3BucketExists

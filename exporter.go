@@ -194,6 +194,14 @@ func performDataExport(configuration *ConfigStruct, cliFlags CliFlags, operation
 	}
 }
 
+func getS3Bucket(configuration *ConfigStruct) string {
+	bucket, bucketPrefix := GetS3Configuration(configuration).Bucket, GetS3Configuration(configuration).Prefix
+	if bucketPrefix != "" {
+		bucket = bucketPrefix + "/" + bucket
+	}
+	return bucket
+}
+
 // performDataExportToS3 exports all tables and metadata info configured S3
 // bucket
 func performDataExportToS3(configuration *ConfigStruct,
@@ -223,8 +231,7 @@ func performDataExportToS3(configuration *ConfigStruct,
 	// log into terminal
 	printTables(tableNames)
 
-	bucket := GetS3Configuration(configuration).Prefix + "/" + GetS3Configuration(configuration).Bucket
-
+	bucket := getS3Bucket(configuration)
 	log.Info().Str("bucket name", bucket).Msg("S3 bucket to write to")
 
 	if exportMetadata {
