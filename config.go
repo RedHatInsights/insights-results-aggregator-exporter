@@ -73,6 +73,7 @@ package main
 // INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__S3__SECRET_ACCESS_KEY
 // INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__S3__USE_SSL
 // INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__S3__BUCKET
+// INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__S3__PREFIX
 // INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__LOGGING__DEBUG
 // INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__LOGGING__LOG_DEVEL
 
@@ -100,9 +101,9 @@ const (
 // ConfigStruct is a structure holding the whole service configuration
 type ConfigStruct struct {
 	Storage StorageConfiguration `mapstructure:"storage" toml:"storage"`
-	S3      S3Configuration      `mapstructure:"s3" tomp:"s3"`
+	S3      S3Configuration      `mapstructure:"s3"      toml:"s3"`
 	Logging LoggingConfiguration `mapstructure:"logging" toml:"logging"`
-	Sentry  SentryConfiguration  `mapstructure:"sentry" toml:"sentry"`
+	Sentry  SentryConfiguration  `mapstructure:"sentry"  toml:"sentry"`
 }
 
 // LoggingConfiguration represents configuration for logging in general
@@ -148,6 +149,7 @@ type S3Configuration struct {
 	SecretAccessKey string `mapstructure:"secret_access_key" toml:"secret_access_key"`
 	UseSSL          bool   `mapstructure:"use_ssl"           toml:"use_ssl"`
 	Bucket          string `mapstructure:"bucket"            toml:"bucket"`
+	Prefix          string `mapstructure:"prefix"            toml:"prefix"`
 }
 
 // SentryConfiguration represents the configuration of Sentry logger

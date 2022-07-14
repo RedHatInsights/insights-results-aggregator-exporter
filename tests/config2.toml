@@ -17,6 +17,7 @@ access_key_id = "foobar"
 secret_access_key = "foobar"
 use_ssl = false
 bucket = "test"
+prefix = "test_path"
 
 [logging]
 debug = true

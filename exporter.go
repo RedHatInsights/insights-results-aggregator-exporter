@@ -138,6 +138,7 @@ func showConfiguration(config *ConfigStruct) {
 		Str("SecretAccessKey", s3Configuration.SecretAccessKey).
 		Bool("Use SSL", s3Configuration.UseSSL).
 		Str("Bucket name", s3Configuration.Bucket).
+		Str("Bucket prefix", s3Configuration.Prefix).
 		Msg("S3 configuration")
 }
 
@@ -222,7 +223,8 @@ func performDataExportToS3(configuration *ConfigStruct,
 	// log into terminal
 	printTables(tableNames)
 
-	bucket := GetS3Configuration(configuration).Bucket
+	bucket := GetS3Configuration(configuration).Prefix + "/" + GetS3Configuration(configuration).Bucket
+
 	log.Info().Str("bucket name", bucket).Msg("S3 bucket to write to")
 
 	if exportMetadata {

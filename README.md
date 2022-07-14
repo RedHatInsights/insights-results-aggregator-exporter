@@ -15,26 +15,26 @@ Exporter for Insights Results data stored by Insights Results Aggregator
 * [Documentation](#documentation)
 * [Contribution](#contribution)
 * [Usage](#usage)
-    * [Building](#building)
+	* [Building](#building)
 * [CI/CD](#cicd)
 * [Makefile targets](#makefile-targets)
-    * [Configuration](#configuration)
+	* [Configuration](#configuration)
 * [BDD tests](#bdd-tests)
 * [Example output](#example-output)
-    * [List of files/objects](#list-of-filesobjects)
-    * [Content of `_tables.csv`](#content-of-_tablescsv)
-    * [Content of `_metadata.csv`](#content-of-_metadatacsv)
-    * [Content of `advisor_ratings.csv`](#content-of-advisor_ratingscsv)
-    * [Content of `cluster_rule_toggle.csv`](#content-of-cluster_rule_togglecsv)
-    * [Content of `cluster_rule_user_feedback.csv`](#content-of-cluster_rule_user_feedbackcsv)
-    * [Content of `cluster_user_rule_disable_feedback.csv`](#content-of-cluster_user_rule_disable_feedbackcsv)
-    * [Content of `migration_info.csv`](#content-of-migration_infocsv)
-    * [Content of `consumer_error.csv`](#content-of-consumer_errorcsv)
-    * [Content of `recommendation.csv`](#content-of-recommendationcsv)
-    * [Content of `report.csv`](#content-of-reportcsv)
-    * [Content of `report_info.csv`](#content-of-report_infocsv)
-    * [Content of `rule_disable.csv`](#content-of-rule_disablecsv)
-    * [Content of `rule_hit.csv`](#content-of-rule_hitcsv)
+	* [List of files/objects](#list-of-filesobjects)
+	* [Content of `_tables.csv`](#content-of-_tablescsv)
+	* [Content of `_metadata.csv`](#content-of-_metadatacsv)
+	* [Content of `advisor_ratings.csv`](#content-of-advisor_ratingscsv)
+	* [Content of `cluster_rule_toggle.csv`](#content-of-cluster_rule_togglecsv)
+	* [Content of `cluster_rule_user_feedback.csv`](#content-of-cluster_rule_user_feedbackcsv)
+	* [Content of `cluster_user_rule_disable_feedback.csv`](#content-of-cluster_user_rule_disable_feedbackcsv)
+	* [Content of `migration_info.csv`](#content-of-migration_infocsv)
+	* [Content of `consumer_error.csv`](#content-of-consumer_errorcsv)
+	* [Content of `recommendation.csv`](#content-of-recommendationcsv)
+	* [Content of `report.csv`](#content-of-reportcsv)
+	* [Content of `report_info.csv`](#content-of-report_infocsv)
+	* [Content of `rule_disable.csv`](#content-of-rule_disablecsv)
+	* [Content of `rule_hit.csv`](#content-of-rule_hitcsv)
 * [Package manifest](#package-manifest)
 
 <!-- vim-markdown-toc -->
@@ -168,6 +168,7 @@ access_key_id = "foobar"
 secret_access_key = "foobar"
 use_ssl = false
 bucket = "test"
+prefix = "prefix"
 
 [logging]
 debug = true
@@ -195,6 +196,7 @@ INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__S3__ACCESS_KEY_ID
 INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__S3__SECRET_ACCESS_KEY
 INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__S3__USE_SSL
 INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__S3__BUCKET
+INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__S3__PREFIX
 INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__LOGGING__DEBUG
 INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__LOGGING__LOG_DEVEL
 INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__SENTRY__DSN

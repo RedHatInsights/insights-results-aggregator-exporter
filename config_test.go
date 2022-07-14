@@ -162,6 +162,7 @@ func TestLoadS3Configuration(t *testing.T) {
 
 	assert.Equal(t, "minio", S3Cfg.Type)
 	assert.Equal(t, false, S3Cfg.UseSSL)
+	assert.Equal(t, "test_path", S3Cfg.Prefix)
 }
 
 // TestLoadConfigurationFromEnvVariableClowderEnabled tests loading the config.
