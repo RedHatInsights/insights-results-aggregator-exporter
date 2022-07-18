@@ -12,6 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# This is the ClowdJobInvocation (https://redhatinsights.github.io/clowder/clowder/dev/usage/jobs.html) 
+# part of the exporter job. It's been separated from the job (https://github.com/RedHatInsights/insights-results-aggregator-exporter/pull/142)
+# because there is a bug in Clowder (https://issues.redhat.com/browse/RHCLOUD-19961) where the
+# CJI runs before the job gets updated, so it triggers a previous version of the job.
+
+# With the CJI and the job separated, we can make use of promotions (https://gitlab.cee.redhat.com/service/app-interface/-/blob/master/docs/app-sre/continuous-delivery-in-app-interface.md#automatedgated-promotions)
+# and wait for the job to be ready before running the CJI.
+
 ---
 apiVersion: v1
 kind: Template
