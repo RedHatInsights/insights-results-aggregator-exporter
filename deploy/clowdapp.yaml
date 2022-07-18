@@ -31,7 +31,7 @@ objects:
       parallelism: 1
       completions: 1
       activeDeadlineSeconds: ${{ACTIVE_DEADLINE_SECONDS}}
-      backoffLimit: ${{BACKOFF_LIMIT}}
+      backoffLimit: 1 # Clowder doesn't support this setting as a parameter - https://coreos.slack.com/archives/CCRND57FW/p1657620480174029?thread_ts=1657619229.653889&cid=CCRND57FW
       podSpec:
         image: ${IMAGE}:${IMAGE_TAG}
         command:
@@ -101,22 +101,7 @@ objects:
       name: ${DB_NAME}
       version: 12
 
-- apiVersion: cloud.redhat.com/v1alpha1
-  kind: ClowdJobInvocation
-  metadata:
-    labels:
-      app: ccx-results-exporter
-    name: job-launcher-${CJI_RANDOM_SUFFIX}
-  spec:
-    appName: ccx-results-exporter
-    jobs:
-      - instance
-
 parameters:
-- name: CJI_RANDOM_SUFFIX
-  description: A suffix for generating random CJI
-  from: '[a-z]{8}'
-  generate: expression
 - name: CLOWDER_ENABLED
   description: Determines if this is a Clowder deployment
   value: "true"
