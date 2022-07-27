@@ -24,7 +24,7 @@
 apiVersion: v1
 kind: Template
 metadata:
-  name: ccx-results-exporter-cji
+  name: ccx-results-exporter-${JOB_NAME}-cji
 objects:
 - apiVersion: cloud.redhat.com/v1alpha1
   kind: ClowdJobInvocation
@@ -41,3 +41,7 @@ parameters:
 - name: CLOWDER_ENABLED
   description: Determines if this is a Clowder deployment
   value: "true"
+- name: JOB_NAME
+  description: Suffix for the exporter's clowdjob name
+  required: true
+  value: aggregator
