@@ -21,7 +21,7 @@ objects:
 - apiVersion: cloud.redhat.com/v1alpha1
   kind: ClowdApp
   metadata:
-    name: ccx-results-exporter
+    name: ccx-results-exporter-${DB_NAME}
   spec:
     envName: ${ENV_NAME}
     testing:
