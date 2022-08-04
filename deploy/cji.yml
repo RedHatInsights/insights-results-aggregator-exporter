@@ -24,16 +24,16 @@
 apiVersion: v1
 kind: Template
 metadata:
-  name: ccx-results-exporter-${JOB_NAME}-cji
+  name: ccx-results-exporter-${DB_NAME}-cji
 objects:
 - apiVersion: cloud.redhat.com/v1alpha1
   kind: ClowdJobInvocation
   metadata:
     labels:
       app: ccx-results-exporter
-    name: ${JOB_NAME}-job-launcher
+    name: ${DB_NAME}-job-launcher
   spec:
-    appName: ccx-results-exporter
+    appName: ccx-results-exporter-${DB_NAME}
     jobs:
       - instance
 
@@ -41,7 +41,6 @@ parameters:
 - name: CLOWDER_ENABLED
   description: Determines if this is a Clowder deployment
   value: "true"
-- name: JOB_NAME
-  description: Suffix for the exporter's clowdjob name
+- name: DB_NAME
   required: true
-  value: aggregator
+  value: ccx-data-pipeline

@@ -145,6 +145,7 @@ parameters:
   value: "true"
 - name: DB_NAME
   value: ccx-data-pipeline
+  required: true
 - name: S3__TYPE
   value: s3
 - name: S3__ENDPOINT_PORT
