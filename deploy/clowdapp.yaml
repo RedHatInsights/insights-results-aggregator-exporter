@@ -86,7 +86,7 @@ objects:
               key: bucket
               optional: true
         - name: INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__S3__PREFIX
-          value: ""
+          value: ${DB_NAME}
         - name: INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__LOGGING__DEBUG
           value: "${DEBUG}"
         - name: INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__LOGGING__LOG_DEVEL
