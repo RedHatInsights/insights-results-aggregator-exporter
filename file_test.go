@@ -23,7 +23,6 @@ package main_test
 // https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/file_test.html
 
 import (
-	"io/ioutil"
 	"os"
 	"testing"
 
@@ -35,7 +34,7 @@ import (
 // mustCreateTemporaryDirectory helper function creates temporary directory
 // that will be cleaned up after tests
 func mustCreateTemporaryDirectory(t *testing.T) string {
-	directory, err := ioutil.TempDir(os.TempDir(), "exporter")
+	directory, err := os.MkdirTemp(os.TempDir(), "exporter")
 	if err != nil {
 		t.Fatal(err)
 	}
