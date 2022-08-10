@@ -51,6 +51,8 @@ objects:
         env:
         - name: ENV_NAME
           value: ${ENV_NAME}
+        - name: INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__STORAGE__PG_DB_NAME
+          value: ${DB_NAME}
         - name: INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__STORAGE__DB_DRIVER
           value: postgres
         - name: INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__STORAGE__PG_PARAMS
