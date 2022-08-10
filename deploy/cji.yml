@@ -31,7 +31,7 @@ objects:
   metadata:
     labels:
       app: ccx-results-exporter
-    name: ${DB_NAME}-job-launcher
+    name: ${DB_NAME}-job-launcher-${CJI_RANDOM_SUFFIX}
   spec:
     appName: ccx-results-exporter-${DB_NAME}
     jobs:
@@ -44,3 +44,7 @@ parameters:
 - name: DB_NAME
   required: true
   value: ccx-data-pipeline
+- name: CJI_RANDOM_SUFFIX
+  description: A suffix for generating random CJI
+  from: '[a-z]{8}'
+  generate: expression
