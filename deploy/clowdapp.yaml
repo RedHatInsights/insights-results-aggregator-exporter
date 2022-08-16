@@ -152,4 +152,4 @@ parameters:
   description: S3 endpoint port. Leave it empty in case you are using AWS.
 - name: TEST_DATE
   description: A variable to force the job to run.
-  value: 11/08/2020
+  value: 15/08/2022
