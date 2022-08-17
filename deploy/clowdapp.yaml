@@ -40,7 +40,7 @@ objects:
           - "-output=${OUTPUT}"
           - "-metadata=true"
           - "-ignore-tables=${TABLES_TO_IGNORE}"
-          - "-limit 10"
+          - "-limit=10"
         restartPolicy: Never
         resources:
           requests:
