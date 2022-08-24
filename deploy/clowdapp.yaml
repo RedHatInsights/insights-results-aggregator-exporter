@@ -101,8 +101,7 @@ objects:
         - name: INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__SENTRY__ENVIRONMENT
           value: ${ENV_NAME}
     database:
-      name: ${DB_NAME}
-      version: 12
+      sharedDbAppName: ${DB_NAME}
 
 parameters:
 - name: CLOWDER_ENABLED
@@ -144,8 +143,7 @@ parameters:
 # Exporter configuration
 - name: DEBUG
   value: "true"
-- name: DB_NAME
-  value: ccx-data-pipeline
+- name: DB_NAME  # this has to match the annotations.clowder/database in app-interface repo (https://gitlab.cee.redhat.com/service/app-interface/-/merge_requests/45935)
   required: true
 - name: S3__TYPE
   value: s3
