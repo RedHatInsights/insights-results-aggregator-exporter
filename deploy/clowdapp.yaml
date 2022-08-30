@@ -157,3 +157,4 @@ parameters:
   value: 19/08/2022
 - name: SELECT_LIMIT
   description: Number of rows to export
+  value: "-1"
