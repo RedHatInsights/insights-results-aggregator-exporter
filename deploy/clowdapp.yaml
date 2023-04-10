@@ -98,9 +98,10 @@ objects:
         - name: INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__SENTRY__DSN
           valueFrom:
             secretKeyRef:
-              key: IRAE_SENTRY_DSN
-              name: sentry-dsn
+              key: dsn
+              name: ccx-aggregator-exporter-dsn
               optional: true
+
         - name: INSIGHTS_RESULTS_AGGREGATOR_EXPORTER__SENTRY__ENVIRONMENT
           value: ${ENV_NAME}
     database:
