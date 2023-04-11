@@ -24,6 +24,7 @@ package main
 
 import (
 	"bytes"
+	"errors"
 	"flag"
 	"fmt"
 	"os"
@@ -561,6 +562,8 @@ func mainWithStatusCode() int {
 	}
 
 	defer loggingCloser()
+
+	log.Error().Err(errors.New("test error")).Msg("this is a test error")
 
 	var buffer bytes.Buffer
 	operationLogger, err := createOperationLog(cliFlags, &buffer)
