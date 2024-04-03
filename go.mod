@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/BurntSushi/toml v1.3.2
 	github.com/DATA-DOG/go-sqlmock v1.5.2
-	github.com/archdx/zerolog-sentry v1.5.0
+	github.com/archdx/zerolog-sentry v1.8.2
 	github.com/lib/pq v1.10.9
 	github.com/mattn/go-sqlite3 v2.0.3+incompatible
 	github.com/minio/minio-go/v7 v7.0.63
@@ -21,7 +21,7 @@ require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
-	github.com/getsentry/sentry-go v0.21.0 // indirect
+	github.com/getsentry/sentry-go v0.24.1 // indirect
 	github.com/google/uuid v1.4.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
