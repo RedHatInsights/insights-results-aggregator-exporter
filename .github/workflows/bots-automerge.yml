@@ -10,16 +10,11 @@ permissions:
 jobs:
   bot-automerge:
     runs-on: ubuntu-latest
-    if: |
-      github.actor == 'dependabot[bot]' ||
-      github.actor == 'red-hat-konflux[bot]' ||
-      github.actor == 'InsightsDroid'
+    #if: github.actor == 'red-hat-konflux[bot]'
+      #github.actor == 'red-hat-konflux[bot]' ||
+      #github.actor == 'dependabot[bot]' ||
+      #github.actor == 'InsightsDroid'
     steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v1
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: Github Actions bot approves the PR
         run: gh pr review --approve "$PR_URL"
         env:
@@ -33,6 +28,11 @@ jobs:
       - name: Enable auto-merge for Dependabot PRs
         # We can filter depending on the semver major, minor, or patch updates,
         # but let's not do it for now
+        #   - name: Dependabot metadata
+        #     id: metadata
+        #     uses: dependabot/fetch-metadata@v1
+        #     with:
+        #       github-token: "${{ secrets.GITHUB_TOKEN }}"
         # if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
         run: gh pr merge --auto --merge "$PR_URL"
         env:
