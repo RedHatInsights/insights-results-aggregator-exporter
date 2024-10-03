@@ -136,7 +136,7 @@ parameters:
   value: "1"
 - name: IMAGE
   description: Image ID of the job.
-  value: quay.io/cloudservices/insights-results-aggregator-exporter
+  value: quay.io/redhat-services-prod/obsint-processing-tenant/aggregator-exporter/aggregator-exporter
 - name: IMAGE_TAG
   description: The image tag.
   value: latest

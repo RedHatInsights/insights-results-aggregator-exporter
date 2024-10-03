@@ -23,6 +23,9 @@ IMAGE="quay.io/cloudservices/insights-results-aggregator-exporter"
 COMPONENTS="insights-results-aggregator-exporter ccx-notification-service ccx-notification-db-cleaner"  # space-separated list of components to laod
 COMPONENTS_W_RESOURCES="insights-results-aggregator-exporter"  # component to keep
 CACHE_FROM_LATEST_IMAGE="true"
+# Set the correct images for pull requests.
+# pr_check in pull requests still uses the old cloudservices images
+EXTRA_DEPLOY_ARGS="--set-parameter insights-results-aggregator-exporter/IMAGE=quay.io/cloudservices/insights-results-aggregator-exporter"
 
 export IQE_PLUGINS="ccx"
 export IQE_MARKER_EXPRESSION=""
