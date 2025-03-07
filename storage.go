@@ -68,7 +68,7 @@ const (
              FROM pg_catalog.pg_tables
             WHERE schemaname != 'information_schema'
               AND schemaname != 'pg_catalog';
-			  AND schemaname != 'dvo';
+              AND schemaname != 'dvo';
    `
 
 	selectListOfTablesInSQLite = `
