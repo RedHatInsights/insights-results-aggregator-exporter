@@ -5,7 +5,6 @@
 [![GoDoc](https://godoc.org/github.com/RedHatInsights/insights-results-aggregator-exporter?status.svg)](https://godoc.org/github.com/RedHatInsights/insights-results-aggregator-exporter)
 [![GitHub Pages](https://img.shields.io/badge/%20-GitHub%20Pages-informational)](https://redhatinsights.github.io/insights-results-aggregator-exporter/)
 [![Go Report Card](https://goreportcard.com/badge/github.com/RedHatInsights/insights-results-aggregator-exporter)](https://goreportcard.com/report/github.com/RedHatInsights/insights-results-aggregator-exporter)
-[![Build Status](https://travis-ci.com/RedHatInsights/insights-results-aggregator-exporter.svg?branch=master)](https://travis-ci.com/RedHatInsights/insights-results-aggregator-exporter)
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/RedHatInsights/insights-results-aggregator-exporter)
 [![License](https://img.shields.io/badge/license-Apache-blue)](https://github.com/RedHatInsights/insights-results-aggregator-exporter/blob/master/LICENSE)
 [![codecov](https://codecov.io/gh/RedHatInsights/insights-results-aggregator-exporter/branch/master/graph/badge.svg)](https://codecov.io/gh/RedHatInsights/insights-results-aggregator-exporter)
