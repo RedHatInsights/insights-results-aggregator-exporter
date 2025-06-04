@@ -311,7 +311,6 @@ func fillInMasterData(columnTypes []*sql.ColumnType, scanArgs []interface{}) map
 
 	// fill-in the data structure by row data
 	for i, v := range columnTypes {
-
 		if z, ok := (scanArgs[i]).(*sql.NullBool); ok {
 			masterData[v.Name()] = z.Bool
 			continue
@@ -650,7 +649,6 @@ func (storage DBStorage) StoreTableMetadataIntoFile(fileName string, tableNames 
 func (storage DBStorage) StoreTableMetadataIntoS3(ctx context.Context,
 	minioClient *minio.Client, bucketName string, objectName string,
 	tableNames []TableName) error {
-
 	buffer := new(bytes.Buffer)
 
 	err := TableMetadataToCSV(buffer, tableNames, storage)
