@@ -108,7 +108,7 @@ objects:
           valueFrom:
             secretKeyRef:
               key: dsn
-              name: insights-aggregator-exporter-dsn
+              name: ${SENTRY_DSN_NAME}-dsn
               optional: true
         - name: INSIGHTS_RESULTS_AGGREGATOR__LOGGING__LOGGING_TO_SENTRY_ENABLED
           value: ${SENTRY_ENABLED}
@@ -181,3 +181,7 @@ parameters:
   value: "-1"
 - name: SENTRY_ENABLED
   value: "false"
+- name: SENTRY_DSN_NAME
+  description: Name of the Glitchtip project to report issues to
+  value: ""
+  required: true
