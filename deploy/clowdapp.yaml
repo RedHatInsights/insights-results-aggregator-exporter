@@ -30,7 +30,7 @@ objects:
     testing:
       iqePlugin: ccx
     jobs:
-    - name: ${DB_NAME}-instance
+    - name: ${DB_NAME}-exporter-instance
       parallelism: 1
       completions: 1
       activeDeadlineSeconds: ${{ACTIVE_DEADLINE_SECONDS}}
