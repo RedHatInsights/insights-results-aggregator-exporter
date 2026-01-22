@@ -49,3 +49,5 @@ require (
 	golang.org/x/text v0.33.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/go-ini/ini => gopkg.in/ini.v1 v1.67.1
