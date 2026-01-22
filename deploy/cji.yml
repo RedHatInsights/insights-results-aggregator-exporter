@@ -35,7 +35,7 @@ objects:
   spec:
     appName: exporter
     jobs:
-      - ${DB_NAME}-instance
+      - ${DB_NAME}-exporter-instance
 
 parameters:
 - name: CLOWDER_ENABLED
