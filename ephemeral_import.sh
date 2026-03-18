@@ -21,7 +21,7 @@ GREEN_BG=$(tput setab 2)
 RED_BG=$(tput setab 1)
 NC=$(tput sgr0) # No Color
 
-APP_NAME="ccx-data-pipeline" 
+APP_NAME="ccx-data-pipeline"
 REF_ENV="insights-production"
 TESTDATA_PATH="testdata"
 DB_POD_DATA_PATH="/tmp/"
@@ -43,7 +43,7 @@ DB_POD=""
 export IQE_ENV="ephemeral"
 
 function deploy_ephemeral() {
-   # deploy all external pipeline services as they are in REF_ENV. output to separate file 
+   # deploy all external pipeline services as they are in REF_ENV. output to separate file
    bonfire deploy ccx-data-pipeline --source=appsre --ref-env ${REF_ENV} --namespace ${EPH_NAMESPACE} > bonfire_deploy.out 2>&1 &
 }
 
@@ -144,7 +144,7 @@ function get_ephemeral_namespace() {
       # try to find an already existing namespace
       FIRST_AVAILABLE=$(bonfire namespace list --mine | grep 'ephemeral-*' | awk '{print $1}' | head -1)
       if [[ $FIRST_AVAILABLE != "" ]];
-      then 
+      then
          echo "${GREEN_BG}Existing ephemeral namespace found, do you want to use ${FIRST_AVAILABLE}?${NC}"
          select yn in "Yes" "No"; do
             case $yn in

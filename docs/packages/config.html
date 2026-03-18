@@ -114,7 +114,7 @@
   <table>
     <thead><tr><th class="doc"><h1>config.go</h1></th><th class="code"></th></tr></thead>
     <tbody>
-      
+
       <tr class="section">
 	<td class="doc"></td>
 	<td class="code"><pre><code><div class="comment">/*
@@ -137,7 +137,7 @@ limitations under the License.
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>This source file contains definition of data type named ConfigStruct that
 represents configuration of Insights Results Aggregator Exporter. This source
@@ -151,7 +151,7 @@ options.</p>
 	<td class="code"><pre><code>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Generated documentation is available at:
 https://pkg.go.dev/github.com/RedHatInsights/insights-results-aggregator-exporter</p>
@@ -162,7 +162,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/c
 	<td class="code"><pre><code>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Default name of configuration file is config.toml
 It can be changed via environment variable INSIGHTS<em>RESULTS</em>AGGREGATOR<em>EXPORTER</em>CONFIG_FILE</p>
@@ -170,7 +170,7 @@ It can be changed via environment variable INSIGHTS<em>RESULTS</em>AGGREGATOR<em
 	<td class="code"><pre><code>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>An example of configuration file that can be used in devel environment:</p>
 
@@ -233,7 +233,7 @@ INSIGHTS<em>RESULTS</em>AGGREGATOR_EXPORTER<strong>LOGGING</strong>LOG_DEVEL</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Common constants used for during logging and error reporting</p>
 </td>
@@ -244,7 +244,7 @@ INSIGHTS<em>RESULTS</em>AGGREGATOR_EXPORTER<strong>LOGGING</strong>LOG_DEVEL</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>ConfigStruct is a structure holding the whole service configuration</p>
 </td>
@@ -257,14 +257,14 @@ INSIGHTS<em>RESULTS</em>AGGREGATOR_EXPORTER<strong>LOGGING</strong>LOG_DEVEL</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>LoggingConfiguration represents configuration for logging in general</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">type</div> <div class="ident">LoggingConfiguration</div> <div class="keyword">struct</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Debug enables pretty colored logging</p>
 </td>
@@ -272,7 +272,7 @@ INSIGHTS<em>RESULTS</em>AGGREGATOR_EXPORTER<strong>LOGGING</strong>LOG_DEVEL</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>LogLevel sets logging level to show. Possible values are:
 &quot;debug&quot;
@@ -287,7 +287,7 @@ INSIGHTS<em>RESULTS</em>AGGREGATOR_EXPORTER<strong>LOGGING</strong>LOG_DEVEL</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>LoggingToCloudWatchEnabled enables logging to CloudWatch
 (configuration for CloudWatch is in CloudWatchConfiguration)</p>
@@ -297,7 +297,7 @@ INSIGHTS<em>RESULTS</em>AGGREGATOR_EXPORTER<strong>LOGGING</strong>LOG_DEVEL</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>StorageConfiguration represents configuration of input data storage
 (database)</p>
@@ -316,7 +316,7 @@ INSIGHTS<em>RESULTS</em>AGGREGATOR_EXPORTER<strong>LOGGING</strong>LOG_DEVEL</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>S3Configuration represents configuration of S3/Minio data storage</p>
 </td>
@@ -333,7 +333,7 @@ INSIGHTS<em>RESULTS</em>AGGREGATOR_EXPORTER<strong>LOGGING</strong>LOG_DEVEL</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>SentryConfiguration represents the configuration of Sentry logger</p>
 </td>
@@ -344,7 +344,7 @@ INSIGHTS<em>RESULTS</em>AGGREGATOR_EXPORTER<strong>LOGGING</strong>LOG_DEVEL</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>LoadConfiguration function loads configuration from defaultConfigFile, file
 set in configFileEnvVariableName or from environment variables</p>
@@ -354,7 +354,7 @@ set in configFileEnvVariableName or from environment variables</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>env. variable holding name of configuration file</p>
 </td>
@@ -363,7 +363,7 @@ set in configFileEnvVariableName or from environment variables</p>
 		<div class="ident">log</div><div class="operator">.</div><div class="ident">Info</div><div class="operator">(</div><div class="operator">)</div><div class="operator">.</div><div class="ident">Str</div><div class="operator">(</div><div class="ident">filenameAttribute</div><div class="operator">,</div> <div class="ident">configFile</div><div class="operator">)</div><div class="operator">.</div><div class="ident">Msg</div><div class="operator">(</div><div class="ident">parsingConfigurationFileMessage</div><div class="operator">)</div><div class="operator"></div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>we need to separate the directory name and filename without
 extension</p>
@@ -372,7 +372,7 @@ extension</p>
 		<div class="ident">file</div> <div class="operator">:=</div> <div class="ident">strings</div><div class="operator">.</div><div class="ident">TrimSuffix</div><div class="operator">(</div><div class="ident">basename</div><div class="operator">,</div> <div class="ident">filepath</div><div class="operator">.</div><div class="ident">Ext</div><div class="operator">(</div><div class="ident">basename</div><div class="operator">)</div><div class="operator">)</div><div class="operator"></div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>parse the configuration</p>
 </td>
@@ -382,7 +382,7 @@ extension</p>
 		<div class="ident">log</div><div class="operator">.</div><div class="ident">Info</div><div class="operator">(</div><div class="operator">)</div><div class="operator">.</div><div class="ident">Str</div><div class="operator">(</div><div class="ident">filenameAttribute</div><div class="operator">,</div> <div class="ident">defaultConfigFile</div><div class="operator">)</div><div class="operator">.</div><div class="ident">Msg</div><div class="operator">(</div><div class="ident">parsingConfigurationFileMessage</div><div class="operator">)</div><div class="operator"></div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>parse the configuration</p>
 </td>
@@ -392,7 +392,7 @@ extension</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>try to read the whole configuration</p>
 </td>
@@ -400,7 +400,7 @@ extension</p>
 	<div class="keyword">if</div> <div class="ident">_</div><div class="operator">,</div> <div class="ident">isNotFoundError</div> <div class="operator">:=</div> <div class="ident">err</div><div class="operator">.</div><div class="operator">(</div><div class="ident">viper</div><div class="operator">.</div><div class="ident">ConfigFileNotFoundError</div><div class="operator">)</div><div class="operator">;</div> <div class="operator">!</div><div class="ident">specified</div> <div class="operator">&amp;&amp;</div> <div class="ident">isNotFoundError</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>If configuration file is not present (which might be correct
 in some environment) we need to read configuration from
@@ -423,7 +423,7 @@ itself, so we need to read fake config file</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check for error during parsing</p>
 </td>
@@ -433,7 +433,7 @@ itself, so we need to read fake config file</p>
 	<div class="operator">}</div> <div class="keyword">else</div> <div class="keyword">if</div> <div class="ident">err</div> <div class="operator">!=</div> <div class="ident">nil</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>error is processed on caller side</p>
 </td>
@@ -442,7 +442,7 @@ itself, so we need to read fake config file</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>override config from env if there's variable in env</p>
 </td>
@@ -455,7 +455,7 @@ itself, so we need to read fake config file</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>try to unmarshall configuration and check for (any) error</p>
 </td>
@@ -466,7 +466,7 @@ itself, so we need to read fake config file</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>updated configuration by introducing Clowder-related things</p>
 </td>
@@ -480,7 +480,7 @@ itself, so we need to read fake config file</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>GetStorageConfiguration function returns storage configuration</p>
 </td>
@@ -490,7 +490,7 @@ itself, so we need to read fake config file</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>GetLoggingConfiguration function returns logging configuration</p>
 </td>
@@ -500,7 +500,7 @@ itself, so we need to read fake config file</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>GetSentryConfiguration returns logging configuration</p>
 </td>
@@ -510,7 +510,7 @@ itself, so we need to read fake config file</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>GetS3Configuration function returns S3/Minio configuration</p>
 </td>
@@ -520,7 +520,7 @@ itself, so we need to read fake config file</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>updateConfigFromClowder function updates the current config with the values
 defined in clowder</p>
@@ -529,7 +529,7 @@ defined in clowder</p>
 	<div class="keyword">if</div> <div class="ident">clowder</div><div class="operator">.</div><div class="ident">IsClowderEnabled</div><div class="operator">(</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>can not use Zerolog at this moment!</p>
 </td>
@@ -538,7 +538,7 @@ defined in clowder</p>
 		<div class="keyword">if</div> <div class="ident">clowder</div><div class="operator">.</div><div class="ident">LoadedConfig</div><div class="operator">.</div><div class="ident">Database</div> <div class="operator">!=</div> <div class="ident">nil</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>get DB configuration from clowder</p>
 </td>
@@ -558,7 +558,7 @@ defined in clowder</p>
 
 </code></pre></td>
       </tr>
-      
+
     </tbody>
   </table>
 </div>

@@ -114,7 +114,7 @@
   <table>
     <thead><tr><th class="doc"><h1>s3_test.go</h1></th><th class="code"></th></tr></thead>
     <tbody>
-      
+
       <tr class="section">
 	<td class="doc"></td>
 	<td class="code"><pre><code><div class="comment">/*
@@ -137,7 +137,7 @@ limitations under the License.
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Generated documentation is available at:
 https://pkg.go.dev/github.com/RedHatInsights/insights-results-aggregator-exporter</p>
@@ -159,7 +159,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>mustConstructMinioClient helper function constructs an instance of Minio
 client or make the test fail</p>
@@ -173,7 +173,7 @@ client or make the test fail</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Test case specification structure for function main.NewS3Connection</p>
 </td>
@@ -186,14 +186,14 @@ client or make the test fail</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>TestNewS3Connection checks the function/constructor NewS3Connection</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestNewS3Connection</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>all test cases</p>
 </td>
@@ -243,7 +243,7 @@ client or make the test fail</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>run all specified test cases</p>
 </td>
@@ -251,7 +251,7 @@ client or make the test fail</p>
 		<div class="ident">t</div><div class="operator">.</div><div class="ident">Run</div><div class="operator">(</div><div class="ident">testCase</div><div class="operator">.</div><div class="ident">description</div><div class="operator">,</div> <div class="keyword">func</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>try to construct Minio client using nil
 configuration</p>
@@ -260,14 +260,14 @@ configuration</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check for error</p>
 </td>
 	<td class="code"><pre><code>			<div class="keyword">if</div> <div class="ident">testCase</div><div class="operator">.</div><div class="ident">shouldFail</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>client should not be constructed and error
 should be returned</p>
@@ -278,7 +278,7 @@ should be returned</p>
 			<div class="operator">}</div> <div class="keyword">else</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>client should be constructed and error
 should not be returned</p>
@@ -293,7 +293,7 @@ should not be returned</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Test case specification structure for function main.s3BucketExists</p>
 </td>
@@ -307,7 +307,7 @@ should not be returned</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>TestS3BucketExists checks the function s3BucketExists</p>
 </td>
@@ -316,7 +316,7 @@ should not be returned</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>all test cases</p>
 </td>
@@ -345,7 +345,7 @@ should not be returned</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>run all specified test cases</p>
 </td>
@@ -356,7 +356,7 @@ should not be returned</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check for error</p>
 </td>
@@ -374,7 +374,7 @@ should not be returned</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Test case specification structure for function main.storeTableNames</p>
 </td>
@@ -390,7 +390,7 @@ should not be returned</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>TestStoreTableNamesNoClient checks the function storeTableNames</p>
 </td>
@@ -399,7 +399,7 @@ should not be returned</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>all test cases</p>
 </td>
@@ -452,7 +452,7 @@ should not be returned</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>run all specified test cases</p>
 </td>
@@ -464,7 +464,7 @@ should not be returned</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check for error</p>
 </td>
@@ -482,7 +482,7 @@ should not be returned</p>
 
 </code></pre></td>
       </tr>
-      
+
     </tbody>
   </table>
 </div>

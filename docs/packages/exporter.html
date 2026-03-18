@@ -114,7 +114,7 @@
   <table>
     <thead><tr><th class="doc"><h1>exporter.go</h1></th><th class="code"></th></tr></thead>
     <tbody>
-      
+
       <tr class="section">
 	<td class="doc"></td>
 	<td class="code"><pre><code><div class="comment">/*
@@ -137,7 +137,7 @@ limitations under the License.
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Generated documentation is available at:
 https://pkg.go.dev/github.com/RedHatInsights/insights-results-aggregator-exporter</p>
@@ -159,7 +159,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/e
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Messages</p>
 </td>
@@ -174,14 +174,14 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/e
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Exit codes</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">const</div> <div class="operator">(</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>ExitStatusOK means that the tool finished with success</p>
 </td>
@@ -189,7 +189,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/e
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>ExitStatusLoggingError is returned in case of any logging initialization
 error</p>
@@ -198,7 +198,7 @@ error</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>ExitStatusStorageError is returned in case of any consumer-related
 error</p>
@@ -207,7 +207,7 @@ error</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>ExitStatusS3Error is returned in case of any error related with
 S3/Minio connection</p>
@@ -216,7 +216,7 @@ S3/Minio connection</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>ExitStatusConfigurationError is returned in case user provide wrong
 configuration on command line or in configuration file</p>
@@ -225,7 +225,7 @@ configuration on command line or in configuration file</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>ExitStatusIOError is returned in case of any I/O error (export data
 into file failed etc.)</p>
@@ -240,7 +240,7 @@ into file failed etc.)</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>output files or objects containing metadata</p>
 </td>
@@ -253,7 +253,7 @@ into file failed etc.)</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>messages</p>
 </td>
@@ -271,7 +271,7 @@ into file failed etc.)</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>flags</p>
 </td>
@@ -282,7 +282,7 @@ into file failed etc.)</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>showVersion function displays version information.</p>
 </td>
@@ -292,7 +292,7 @@ into file failed etc.)</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>showAuthors function displays information about authors.</p>
 </td>
@@ -302,7 +302,7 @@ into file failed etc.)</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>showConfiguration function displays actual configuration.</p>
 </td>
@@ -338,7 +338,7 @@ into file failed etc.)</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>constructIgnoredTablesMap helper function splits list of tables by comma and
 constructs a map from it where keys are taken from splitted string</p>
@@ -348,7 +348,7 @@ constructs a map from it where keys are taken from splitted string</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare empty map with given capacity</p>
 </td>
@@ -356,7 +356,7 @@ constructs a map from it where keys are taken from splitted string</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>don't add empty string into a map</p>
 </td>
@@ -366,7 +366,7 @@ constructs a map from it where keys are taken from splitted string</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>put ignored tables into such map</p>
 </td>
@@ -379,7 +379,7 @@ constructs a map from it where keys are taken from splitted string</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>performDataExport function exports all data into selected output</p>
 </td>
@@ -388,7 +388,7 @@ constructs a map from it where keys are taken from splitted string</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare the storage</p>
 </td>
@@ -420,7 +420,7 @@ constructs a map from it where keys are taken from splitted string</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>performDataExportToS3 exports all tables and metadata info configured S3
 bucket</p>
@@ -451,7 +451,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>log into terminal</p>
 </td>
@@ -468,7 +468,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>export list of all tables into S3</p>
 </td>
@@ -483,7 +483,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>export tables metadata into S3</p>
 </td>
@@ -501,7 +501,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>export rules disabled by more users into CSV file</p>
 </td>
@@ -514,7 +514,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>export list of disabled rules</p>
 </td>
@@ -531,14 +531,14 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>read content of all tables and perform export</p>
 </td>
 	<td class="code"><pre><code>	<div class="keyword">for</div> <div class="ident">_</div><div class="operator">,</div> <div class="ident">tableName</div> <div class="operator">:=</div> <div class="keyword">range</div> <div class="ident">tableNames</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>ignore table if specified by user</p>
 </td>
@@ -566,7 +566,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>we have finished, let's close the connection to database</p>
 </td>
@@ -579,7 +579,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>default exit value + no error</p>
 </td>
@@ -588,7 +588,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>performDataExportToFiles exports all tables and metadata info files</p>
 </td>
@@ -613,7 +613,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>log into terminal</p>
 </td>
@@ -624,7 +624,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>export list of all tables into CSV file</p>
 </td>
@@ -638,7 +638,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>export tables metadata into CSV file</p>
 </td>
@@ -656,7 +656,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>export rules disabled by more users into CSV file</p>
 </td>
@@ -669,7 +669,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>export list of disabled rules</p>
 </td>
@@ -685,14 +685,14 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>read content of all tables and perform export</p>
 </td>
 	<td class="code"><pre><code>	<div class="keyword">for</div> <div class="ident">_</div><div class="operator">,</div> <div class="ident">tableName</div> <div class="operator">:=</div> <div class="keyword">range</div> <div class="ident">tableNames</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>ignore table if specified by user</p>
 </td>
@@ -720,7 +720,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>we have finished, let's close the connection to database</p>
 </td>
@@ -733,7 +733,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>default exit value + no error</p>
 </td>
@@ -748,7 +748,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>checkS3Connection checks if connection to S3 is possible</p>
 </td>
@@ -789,7 +789,7 @@ bucket</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>doSelectedOperation function perform operation selected on command line.
 When no operation is specified, the Notification writer service is started
@@ -812,7 +812,7 @@ instead.</p>
 	<div class="keyword">default</div><div class="operator">:</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>default operation - data export</p>
 </td>
@@ -820,7 +820,7 @@ instead.</p>
 	<div class="operator">}</div><div class="operator"></div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>this can not happen: return ExitStatusOK, nil</p>
 </td>
@@ -829,7 +829,7 @@ instead.</p>
 <div class="keyword">func</div> <div class="ident">parseFlags</div><div class="operator">(</div><div class="operator">)</div> <div class="operator">(</div><div class="ident">cliFlags</div> <div class="ident">CliFlags</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>define and parse all command line options</p>
 </td>
@@ -847,7 +847,7 @@ instead.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>parse all command line flags</p>
 </td>
@@ -858,7 +858,7 @@ instead.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>DummyWriter satisfies Writer interface, but with noop write</p>
 </td>
@@ -866,7 +866,7 @@ instead.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Write method satisfies noop io.Write</p>
 </td>
@@ -876,7 +876,7 @@ instead.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>createOperationLog function constructs operation log instance</p>
 </td>
@@ -916,7 +916,7 @@ instead.</p>
 <div class="keyword">func</div> <div class="ident">mainWithStatusCode</div><div class="operator">(</div><div class="operator">)</div> <div class="ident">int</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>parse all command line flags</p>
 </td>
@@ -924,7 +924,7 @@ instead.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>config has exactly the same structure as *.toml file</p>
 </td>
@@ -950,7 +950,7 @@ instead.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>perform selected operation</p>
 </td>
@@ -979,7 +979,7 @@ instead.</p>
 
 </code></pre></td>
       </tr>
-      
+
     </tbody>
   </table>
 </div>
