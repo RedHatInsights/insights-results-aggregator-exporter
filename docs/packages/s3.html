@@ -114,7 +114,7 @@
   <table>
     <thead><tr><th class="doc"><h1>s3.go</h1></th><th class="code"></th></tr></thead>
     <tbody>
-      
+
       <tr class="section">
 	<td class="doc"></td>
 	<td class="code"><pre><code><div class="comment">/*
@@ -137,7 +137,7 @@ limitations under the License.
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Generated documentation is available at:
 https://pkg.go.dev/github.com/RedHatInsights/insights-results-aggregator-exporter</p>
@@ -162,7 +162,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>error messages</p>
 </td>
@@ -180,14 +180,14 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>NewS3Connection function initializes connection to S3/Minio storage.</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">NewS3Connection</div><div class="operator">(</div><div class="ident">configuration</div> <div class="operator">*</div><div class="ident">ConfigStruct</div><div class="operator">)</div> <div class="operator">(</div><div class="operator">*</div><div class="ident">minio</div><div class="operator">.</div><div class="ident">Client</div><div class="operator">,</div> <div class="ident">context</div><div class="operator">.</div><div class="ident">Context</div><div class="operator">,</div> <div class="ident">error</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if configuration structure has been provided</p>
 </td>
@@ -199,7 +199,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>retrieve S3/Minio configuration</p>
 </td>
@@ -218,7 +218,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>initialize Minio client object</p>
 </td>
@@ -231,7 +231,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if client has been constructed properly</p>
 </td>
@@ -246,7 +246,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>s3BucketExists function checks if bucket with given name exists and can be
 accessed by current client</p>
@@ -256,7 +256,7 @@ accessed by current client</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if Minio client has been passed to this function</p>
 </td>
@@ -268,7 +268,7 @@ accessed by current client</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if proper bucket name has been passed to this function</p>
 </td>
@@ -280,7 +280,7 @@ accessed by current client</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check bucket existence</p>
 </td>
@@ -292,7 +292,7 @@ accessed by current client</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>everything seems to be ok</p>
 </td>
@@ -301,7 +301,7 @@ accessed by current client</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>storeTableNames function stores all table names passed via tableNames
 parameter into given bucket under selected object name</p>
@@ -311,7 +311,7 @@ parameter into given bucket under selected object name</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if Minio client has been passed to this function</p>
 </td>
@@ -323,7 +323,7 @@ parameter into given bucket under selected object name</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if proper bucket name has been passed to this function</p>
 </td>
@@ -335,7 +335,7 @@ parameter into given bucket under selected object name</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if proper object name has been passed to this function</p>
 </td>
@@ -347,7 +347,7 @@ parameter into given bucket under selected object name</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>conversion to CSV</p>
 </td>
@@ -374,7 +374,7 @@ parameter into given bucket under selected object name</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>store CSV data into S3/Minio</p>
 </td>
@@ -386,7 +386,7 @@ parameter into given bucket under selected object name</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>everything seems to be ok</p>
 </td>
@@ -395,7 +395,7 @@ parameter into given bucket under selected object name</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>storeDisabledRulesIntoS3 function stores info about disabled rules into S3
 into given bucket under selected object name</p>
@@ -405,7 +405,7 @@ into given bucket under selected object name</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if Minio client has been passed to this function</p>
 </td>
@@ -417,7 +417,7 @@ into given bucket under selected object name</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if proper bucket name has been passed to this function</p>
 </td>
@@ -429,7 +429,7 @@ into given bucket under selected object name</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if proper object name has been passed to this function</p>
 </td>
@@ -441,7 +441,7 @@ into given bucket under selected object name</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>conversion to CSV</p>
 </td>
@@ -456,7 +456,7 @@ into given bucket under selected object name</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>store CSV data into S3/Minio</p>
 </td>
@@ -468,7 +468,7 @@ into given bucket under selected object name</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>everything seems to be ok</p>
 </td>
@@ -484,7 +484,7 @@ into given bucket under selected object name</p>
 
 </code></pre></td>
       </tr>
-      
+
     </tbody>
   </table>
 </div>

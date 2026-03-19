@@ -114,7 +114,7 @@
   <table>
     <thead><tr><th class="doc"><h1>storage.go</h1></th><th class="code"></th></tr></thead>
     <tbody>
-      
+
       <tr class="section">
 	<td class="doc"></td>
 	<td class="code"><pre><code><div class="comment">/*
@@ -137,7 +137,7 @@ limitations under the License.
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Generated documentation is available at:
 https://pkg.go.dev/github.com/RedHatInsights/insights-results-aggregator-exporter</p>
@@ -166,21 +166,21 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Driver types</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">const</div> <div class="operator">(</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>DBDriverSQLite3 shows that db driver is sqlite</p>
 </td>
 	<td class="code"><pre><code>	<div class="ident">DBDriverSQLite3</div> <div class="ident">DBDriver</div> <div class="operator">=</div> <div class="ident">iota</div><div class="operator"></div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>DBDriverPostgres shows that db driver is postgres</p>
 </td>
@@ -189,7 +189,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Error messages for all database-relevant errors</p>
 </td>
@@ -204,14 +204,14 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>SQL statements</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">const</div> <div class="operator">(</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Select all public tables from open database</p>
 </td>
@@ -233,7 +233,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Storage represents an interface to almost any database or storage system</p>
 </td>
@@ -246,7 +246,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>DBStorage is an implementation of Storage interface that use selected SQL like database
 like SQLite, PostgreSQL, MariaDB, RDS etc. That implementation is based on the standard
@@ -260,7 +260,7 @@ SQLQueriesLog is log for sql queries, default is nil which means nothing is logg
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>NewStorage function creates and initializes a new instance of Storage interface</p>
 </td>
@@ -269,7 +269,7 @@ SQLQueriesLog is log for sql queries, default is nil which means nothing is logg
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>initialize database driver</p>
 </td>
@@ -281,7 +281,7 @@ SQLQueriesLog is log for sql queries, default is nil which means nothing is logg
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>print info about initialized driver</p>
 </td>
@@ -292,7 +292,7 @@ SQLQueriesLog is log for sql queries, default is nil which means nothing is logg
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to database</p>
 </td>
@@ -308,7 +308,7 @@ SQLQueriesLog is log for sql queries, default is nil which means nothing is logg
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>NewFromConnection function creates and initializes a new instance of Storage interface from prepared connection</p>
 </td>
@@ -321,7 +321,7 @@ SQLQueriesLog is log for sql queries, default is nil which means nothing is logg
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>initAndGetDriver initializes driver(with logs if logSQLQueries is true),
 checks if it's supported and returns driver type, driver name, dataSource and error</p>
@@ -353,7 +353,7 @@ checks if it's supported and returns driver type, driver name, dataSource and er
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Close method closes the connection to database. Needs to be called at the
 end of application lifecycle.</p>
@@ -363,7 +363,7 @@ end of application lifecycle.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>try to close the connection</p>
 </td>
@@ -379,7 +379,7 @@ end of application lifecycle.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>ReadListOfTables method reads names of all public tables stored in opened
 database.</p>
@@ -387,7 +387,7 @@ database.</p>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="operator">(</div><div class="ident">storage</div> <div class="ident">DBStorage</div><div class="operator">)</div> <div class="ident">ReadListOfTables</div><div class="operator">(</div><div class="operator">)</div> <div class="operator">(</div><div class="operator">[</div><div class="operator">]</div><div class="ident">TableName</div><div class="operator">,</div> <div class="ident">error</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>slice to make list of tables</p>
 </td>
@@ -407,7 +407,7 @@ database.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>read all table names</p>
 </td>
@@ -429,7 +429,7 @@ database.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>logColumnTypes is helper function to print column names and types for
 selected table.</p>
@@ -450,7 +450,7 @@ selected table.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>logRecordCount is helper function to print number of records stored in
 given database table.</p>
@@ -464,7 +464,7 @@ given database table.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>fillInScanArgs prepares arguments for the Scan method to retrieve row from
 selected table.</p>
@@ -477,7 +477,7 @@ https://stackoverflow.com/questions/42774467/how-to-convert-sql-rows-to-typed-js
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>data structure to scan one row</p>
 </td>
@@ -501,7 +501,7 @@ https://stackoverflow.com/questions/42774467/how-to-convert-sql-rows-to-typed-js
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>fillInMasterData fills the structure by row data read from database from
 selected table.</p>
@@ -514,7 +514,7 @@ https://stackoverflow.com/questions/42774467/how-to-convert-sql-rows-to-typed-js
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>fill-in the data structure by row data</p>
 </td>
@@ -553,7 +553,7 @@ https://stackoverflow.com/questions/42774467/how-to-convert-sql-rows-to-typed-js
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>select1FromTable is helper function to construct query to database - read
 one record from given table.</p>
@@ -561,7 +561,7 @@ one record from given table.</p>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">select1FromTable</div><div class="operator">(</div><div class="ident">tableName</div> <div class="ident">TableName</div><div class="operator">)</div> <div class="ident">string</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>it is not possible to use parameter for table name or a key
 disable &quot;G201 (CWE-89): SQL string formatting (Confidence: HIGH, Severity: MEDIUM)&quot;</p>
@@ -573,7 +573,7 @@ disable &quot;G201 (CWE-89): SQL string formatting (Confidence: HIGH, Severity: 
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>selectCountFromTable is helper function to construct query to database -
 read number of records in table.</p>
@@ -581,7 +581,7 @@ read number of records in table.</p>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">selectCountFromTable</div><div class="operator">(</div><div class="ident">tableName</div> <div class="ident">TableName</div><div class="operator">)</div> <div class="ident">string</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>it is not possible to use parameter for table name or a key
 disable &quot;G201 (CWE-89): SQL string formatting (Confidence: HIGH, Severity: MEDIUM)&quot;</p>
@@ -594,7 +594,7 @@ disable &quot;G201 (CWE-89): SQL string formatting (Confidence: HIGH, Severity: 
 <div class="keyword">func</div> <div class="ident">selectAllFromTable</div><div class="operator">(</div><div class="ident">tableName</div> <div class="ident">TableName</div><div class="operator">)</div> <div class="ident">string</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>it is not possible to use parameter for table name or a key
 disable &quot;G201 (CWE-89): SQL string formatting (Confidence: HIGH, Severity: MEDIUM)&quot;</p>
@@ -606,7 +606,7 @@ disable &quot;G201 (CWE-89): SQL string formatting (Confidence: HIGH, Severity: 
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>ReadTable method reads the whole content of selected table.</p>
 </td>
@@ -634,7 +634,7 @@ disable &quot;G201 (CWE-89): SQL string formatting (Confidence: HIGH, Severity: 
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>try to retrieve column types</p>
 </td>
@@ -649,7 +649,7 @@ disable &quot;G201 (CWE-89): SQL string formatting (Confidence: HIGH, Severity: 
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare data structure to hold raw values</p>
 </td>
@@ -657,14 +657,14 @@ disable &quot;G201 (CWE-89): SQL string formatting (Confidence: HIGH, Severity: 
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>read table row by row</p>
 </td>
 	<td class="code"><pre><code>	<div class="keyword">for</div> <div class="ident">rows</div><div class="operator">.</div><div class="ident">Next</div><div class="operator">(</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare arguments for the Scan method to retrieve row from
 selected table.</p>
@@ -673,7 +673,7 @@ selected table.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>do the actual scan of row read from database</p>
 </td>
@@ -686,7 +686,7 @@ selected table.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>it is now needed to check each element of values for nil
 then to use type introspection and type assertion to be
@@ -696,7 +696,7 @@ able to fetch the column into a typed variable if needed</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>TODO: make the export part there
 println(masterData)</p>
@@ -708,7 +708,7 @@ println(masterData)</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>StoreTable function stores specified table into S3/Minio</p>
 </td>
@@ -726,7 +726,7 @@ println(masterData)</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>initialize CSV writer</p>
 </td>
@@ -748,7 +748,7 @@ println(masterData)</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Compute exact object size instead of using default value -1</p>
 
@@ -769,7 +769,7 @@ https://docs.min.io/docs/golang-client-api-reference#PutObject</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>reset buffer before it will be garbage collected</p>
 </td>
@@ -779,7 +779,7 @@ https://docs.min.io/docs/golang-client-api-reference#PutObject</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>StoreTableIntoFile function stores specified table into selected file</p>
 </td>
@@ -796,7 +796,7 @@ https://docs.min.io/docs/golang-client-api-reference#PutObject</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>open new CSV file to be filled in
 disable &quot;G304 (CWE-22): Potential file inclusion via variable&quot;</p>
@@ -808,7 +808,7 @@ disable &quot;G304 (CWE-22): Potential file inclusion via variable&quot;</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>initialize CSV writer</p>
 </td>
@@ -828,7 +828,7 @@ disable &quot;G304 (CWE-22): Potential file inclusion via variable&quot;</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check for any error during export to CSV</p>
 </td>
@@ -839,7 +839,7 @@ disable &quot;G304 (CWE-22): Potential file inclusion via variable&quot;</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>close the file and check if close operation was ok</p>
 </td>
@@ -853,7 +853,7 @@ disable &quot;G304 (CWE-22): Potential file inclusion via variable&quot;</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>ReadRecordsCount method reads number of records stored in given database
 table.</p>
@@ -863,7 +863,7 @@ table.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>try to query DB</p>
 </td>
@@ -878,7 +878,7 @@ table.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>everything seems to be ok</p>
 </td>
@@ -888,7 +888,7 @@ table.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>RetrieveColumnTypes read column types from given table</p>
 </td>
@@ -897,7 +897,7 @@ table.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>try to query DB</p>
 </td>
@@ -909,7 +909,7 @@ table.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>try to retrieve column types</p>
 </td>
@@ -921,7 +921,7 @@ table.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>close query</p>
 </td>
@@ -933,7 +933,7 @@ table.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>everything seems to be ok</p>
 </td>
@@ -943,7 +943,7 @@ table.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>WriteTableContent method writes content of whole table into given CSV
 writera (may be file or S3 bucke)</p>
@@ -952,7 +952,7 @@ writera (may be file or S3 bucke)</p>
 	<div class="ident">tableName</div> <div class="ident">TableName</div><div class="operator">,</div> <div class="ident">colNames</div> <div class="operator">[</div><div class="operator">]</div><div class="ident">string</div><div class="operator">,</div> <div class="ident">limit</div> <div class="ident">int</div><div class="operator">)</div> <div class="ident">error</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>now we know column types, time to perform export</p>
 </td>
@@ -980,7 +980,7 @@ writera (may be file or S3 bucke)</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>StoreTableMetadataIntoFile method stores metadata about given tables into
 file.</p>
@@ -988,7 +988,7 @@ file.</p>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="operator">(</div><div class="ident">storage</div> <div class="ident">DBStorage</div><div class="operator">)</div> <div class="ident">StoreTableMetadataIntoFile</div><div class="operator">(</div><div class="ident">fileName</div> <div class="ident">string</div><div class="operator">,</div> <div class="ident">tableNames</div> <div class="operator">[</div><div class="operator">]</div><div class="ident">TableName</div><div class="operator">)</div> <div class="ident">error</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>open new CSV file to be filled in
 disable &quot;G304 (CWE-22): Potential file inclusion via variable&quot;</p>
@@ -1002,7 +1002,7 @@ disable &quot;G304 (CWE-22): Potential file inclusion via variable&quot;</p>
 	<div class="keyword">if</div> <div class="ident">err</div> <div class="operator">!=</div> <div class="ident">nil</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>logging has been performed already</p>
 </td>
@@ -1011,7 +1011,7 @@ disable &quot;G304 (CWE-22): Potential file inclusion via variable&quot;</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>initialize CSV writer</p>
 </td>
@@ -1019,7 +1019,7 @@ disable &quot;G304 (CWE-22): Potential file inclusion via variable&quot;</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check for any error during export to CSV</p>
 </td>
@@ -1030,7 +1030,7 @@ disable &quot;G304 (CWE-22): Potential file inclusion via variable&quot;</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>close the file and check if close operation was ok</p>
 </td>
@@ -1044,7 +1044,7 @@ disable &quot;G304 (CWE-22): Potential file inclusion via variable&quot;</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>StoreTableMetadataIntoS3 method stores metadata about given tables into
 S3 or Minio.</p>
@@ -1059,7 +1059,7 @@ S3 or Minio.</p>
 	<div class="keyword">if</div> <div class="ident">err</div> <div class="operator">!=</div> <div class="ident">nil</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>logging has been performed already</p>
 </td>
@@ -1068,7 +1068,7 @@ S3 or Minio.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>write CSV data into S3 bucket or Minio bucket</p>
 </td>
@@ -1082,7 +1082,7 @@ S3 or Minio.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>everything look ok</p>
 </td>
@@ -1109,14 +1109,14 @@ S3 or Minio.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>ReadDisabledRules method reads rules disabled by more than one user</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="operator">(</div><div class="ident">storage</div> <div class="ident">DBStorage</div><div class="operator">)</div> <div class="ident">ReadDisabledRules</div><div class="operator">(</div><div class="operator">)</div> <div class="operator">(</div><div class="operator">[</div><div class="operator">]</div><div class="ident">DisabledRuleInfo</div><div class="operator">,</div> <div class="ident">error</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>slice to make list of disabled rule</p>
 </td>
@@ -1136,7 +1136,7 @@ S3 or Minio.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>read all records</p>
 </td>
@@ -1158,7 +1158,7 @@ S3 or Minio.</p>
 
 </code></pre></td>
       </tr>
-      
+
     </tbody>
   </table>
 </div>

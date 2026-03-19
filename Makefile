@@ -1,6 +1,7 @@
 SHELL := /bin/bash
 
-.PHONY: default clean build fmt lint vet cyclo ineffassign shellcheck errcheck goconst gosec abcgo json-check openapi-check style run test test-postgres cover integration_tests rest_api_tests sqlite_db license before_commit help godoc install_docgo install_addlicense
+.PHONY: default clean build fmt lint shellcheck abcgo style run test cover \
+	license before_commit help godoc install_docgo install_addlicense function_list
 
 SOURCES:=$(shell find . -name '*.go')
 BINARY:=insights-results-aggregator-exporter
@@ -19,24 +20,18 @@ build-cover:	${SOURCES}  ## Build binary with code coverage detection support
 ${BINARY}: ${SOURCES}
 	./build.sh
 
-
-install_golangci-lint:
-	go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@latest
-
-fmt: install_golangci-lint ## Run go formatting
+fmt: ## Run go formatting
 	@echo "Running go formatting"
 	golangci-lint fmt
 
-lint: install_golangci-lint ## Run go liting
-	@echo "Running go linting"
-	golangci-lint run --fix
+lint: ## Run go liting
+	pre-commit run --all-files golangci-lint-full
 
 shellcheck: ## Run shellcheck
-	./shellcheck.sh
+	pre-commit run --all-files shellcheck
 
 abcgo: ## Run ABC metrics checker
-	@echo "Run ABC metrics checker"
-	./abcgo.sh ${VERBOSE}
+	pre-commit run --all-files abcgo
 
 style: fmt lint shellcheck abcgo ## Run all the formatting related commands (fmt, lint, abc) + check shell scripts
 
@@ -55,7 +50,8 @@ coverage:
 license: install_addlicense
 	addlicense -c "Red Hat, Inc" -l "apache" -v ./
 
-before_commit: style test test-postgres integration_tests license ## Checks done before commit
+before_commit: license ## Checks done before commit
+	pre-commit run --all-files
 	./check_coverage.sh
 
 help: ## Show this help screen

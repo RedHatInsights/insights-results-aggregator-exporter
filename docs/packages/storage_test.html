@@ -114,7 +114,7 @@
   <table>
     <thead><tr><th class="doc"><h1>storage_test.go</h1></th><th class="code"></th></tr></thead>
     <tbody>
-      
+
       <tr class="section">
 	<td class="doc"></td>
 	<td class="code"><pre><code><div class="comment">/*
@@ -137,7 +137,7 @@ limitations under the License.
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Generated documentation is available at:
 https://pkg.go.dev/github.com/RedHatInsights/insights-results-aggregator-exporter</p>
@@ -163,7 +163,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>TestNewStorage checks whether constructor for new storage returns error for improper storage configuration</p>
 </td>
@@ -176,7 +176,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>TestNewStoragePostgreSQL function tests creating new storage with logs</p>
 </td>
@@ -194,7 +194,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>we just happen to make connection without trying to actually connect</p>
 </td>
@@ -203,7 +203,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>TestNewStorageSQLite3 function tests creating new storage with logs</p>
 </td>
@@ -215,7 +215,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>we just happen to make connection without trying to actually connect</p>
 </td>
@@ -224,7 +224,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>TestClose function tests database close operation.</p>
 </td>
@@ -236,7 +236,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>we just happen to make connection without trying to actually connect</p>
 </td>
@@ -244,7 +244,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>try to close the storage</p>
 </td>
@@ -252,7 +252,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>it should not fail</p>
 </td>
@@ -261,7 +261,7 @@ https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/s
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>mustCreateMockConnection function tries to create a new mock connection and
 checks if the operation was finished without problems.</p>
@@ -269,7 +269,7 @@ checks if the operation was finished without problems.</p>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">mustCreateMockConnection</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">(</div><div class="operator">*</div><div class="ident">sql</div><div class="operator">.</div><div class="ident">DB</div><div class="operator">,</div> <div class="ident">sqlmock</div><div class="operator">.</div><div class="ident">Sqlmock</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>try to initialize new mock connection</p>
 </td>
@@ -277,7 +277,7 @@ checks if the operation was finished without problems.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the status</p>
 </td>
@@ -290,7 +290,7 @@ checks if the operation was finished without problems.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>checkConnectionClose function perform mocked DB closing operation and checks
 if the connection is properly closed from unit tests.</p>
@@ -298,7 +298,7 @@ if the connection is properly closed from unit tests.</p>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">checkConnectionClose</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">,</div> <div class="ident">connection</div> <div class="operator">*</div><div class="ident">sql</div><div class="operator">.</div><div class="ident">DB</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -306,7 +306,7 @@ if the connection is properly closed from unit tests.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the error status</p>
 </td>
@@ -317,7 +317,7 @@ if the connection is properly closed from unit tests.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>checkAllExpectations function checks if all database-related operations have
 been really met.</p>
@@ -325,7 +325,7 @@ been really met.</p>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">checkAllExpectations</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">,</div> <div class="ident">mock</div> <div class="ident">sqlmock</div><div class="operator">.</div><div class="ident">Sqlmock</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -333,7 +333,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the error status</p>
 </td>
@@ -344,7 +344,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>Expected queries</p>
 </td>
@@ -363,14 +363,14 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the function ReadRecordCount</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestReadRecordCount</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -378,7 +378,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare mocked result for SQL query</p>
 </td>
@@ -388,7 +388,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -397,7 +397,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -405,7 +405,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -420,7 +420,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -428,7 +428,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -438,7 +438,7 @@ been really met.</p>
 <div class="keyword">func</div> <div class="ident">TestReadRecordCountScanError</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -446,7 +446,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare mocked result for SQL query</p>
 </td>
@@ -455,7 +455,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -464,7 +464,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -472,7 +472,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -483,7 +483,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -491,7 +491,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -501,7 +501,7 @@ been really met.</p>
 <div class="keyword">func</div> <div class="ident">TestReadRecordCountOnError</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>error to be thrown</p>
 </td>
@@ -509,7 +509,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -517,7 +517,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -526,7 +526,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -534,7 +534,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -549,7 +549,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -557,7 +557,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -566,14 +566,14 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the function ReadListOfTables</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestReadListOfTables</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -581,7 +581,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare mocked result for SQL query</p>
 </td>
@@ -592,7 +592,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -601,7 +601,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -609,7 +609,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -624,7 +624,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -632,7 +632,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -641,14 +641,14 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the function ReadListOfTables</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestReadListOfTablesOnError</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>error to be thrown</p>
 </td>
@@ -656,7 +656,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -664,7 +664,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -673,7 +673,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -681,7 +681,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -692,7 +692,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -700,7 +700,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -709,14 +709,14 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the function ReadListOfTables</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestReadListOfTablesScanError</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -724,7 +724,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare mocked result for SQL query</p>
 </td>
@@ -735,7 +735,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -744,7 +744,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -752,7 +752,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -763,7 +763,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -771,7 +771,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -780,14 +780,14 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the function ReadTable</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestReadTable</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -795,7 +795,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare mocked result for SQL query</p>
 </td>
@@ -806,7 +806,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>columns of different types</p>
 </td>
@@ -818,7 +818,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -827,7 +827,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -835,7 +835,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -857,7 +857,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -865,7 +865,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -874,14 +874,14 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the function ReadTable with limits set</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestReadTableWithLimits</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -889,7 +889,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare mocked result for SQL query</p>
 </td>
@@ -900,7 +900,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>columns of different types</p>
 </td>
@@ -911,7 +911,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -920,7 +920,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -928,7 +928,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -948,7 +948,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -956,7 +956,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -965,14 +965,14 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the function ReadTable in case of error</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestReadTableOnError</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>error to be thrown</p>
 </td>
@@ -980,7 +980,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -988,7 +988,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -997,7 +997,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -1005,7 +1005,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -1016,7 +1016,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -1024,7 +1024,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -1033,14 +1033,14 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the function RetrieveColumnTypes</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestRetrieveColumnTypes</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -1048,7 +1048,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare mocked result for SQL query</p>
 </td>
@@ -1058,7 +1058,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>columns of different types</p>
 </td>
@@ -1070,7 +1070,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -1079,7 +1079,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -1087,7 +1087,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -1106,7 +1106,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -1114,7 +1114,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -1123,14 +1123,14 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the function RetrieveColumnTypes</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestRetrieveColumnTypesOnError</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>error to be thrown</p>
 </td>
@@ -1138,7 +1138,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -1146,7 +1146,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -1155,7 +1155,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -1163,7 +1163,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -1175,7 +1175,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -1183,7 +1183,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -1192,14 +1192,14 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the function StoreTableIntoFile</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestStoreTableIntoFile</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -1207,7 +1207,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare mocked result for SQL query</p>
 </td>
@@ -1217,7 +1217,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>columns of different types</p>
 </td>
@@ -1229,7 +1229,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -1237,7 +1237,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -1248,7 +1248,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -1256,7 +1256,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -1267,7 +1267,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -1275,7 +1275,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -1283,7 +1283,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check generated file</p>
 </td>
@@ -1302,14 +1302,14 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the function StoreTableIntoFile</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestStoreTableIntoFileWithLimit</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -1317,7 +1317,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare mocked result for SQL query</p>
 </td>
@@ -1327,7 +1327,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>columns of different types</p>
 </td>
@@ -1338,7 +1338,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -1346,7 +1346,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -1357,7 +1357,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -1365,7 +1365,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -1376,7 +1376,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -1384,7 +1384,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -1392,7 +1392,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check generated file</p>
 </td>
@@ -1410,14 +1410,14 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the function ReadDisabledRules</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestReadDisabledRules</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -1425,7 +1425,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare mocked result for SQL query</p>
 </td>
@@ -1436,7 +1436,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -1445,7 +1445,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -1453,7 +1453,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -1468,7 +1468,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the list of returned records</p>
 </td>
@@ -1482,7 +1482,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -1490,7 +1490,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -1499,14 +1499,14 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the function ReadDisabledRules</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestReadDisabledRulesOnError</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>error to be thrown</p>
 </td>
@@ -1514,7 +1514,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -1522,7 +1522,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -1531,7 +1531,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -1539,7 +1539,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -1551,7 +1551,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -1559,7 +1559,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -1568,14 +1568,14 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check the function ReadDisabledRules</p>
 </td>
 	<td class="code"><pre><code><div class="keyword">func</div> <div class="ident">TestReadDisabledRulesScanError</div><div class="operator">(</div><div class="ident">t</div> <div class="operator">*</div><div class="ident">testing</div><div class="operator">.</div><div class="ident">T</div><div class="operator">)</div> <div class="operator">{</div>
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare new mocked connection to database</p>
 </td>
@@ -1583,7 +1583,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare mocked result for SQL query</p>
 </td>
@@ -1594,7 +1594,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>expected query performed by tested function</p>
 </td>
@@ -1604,7 +1604,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>prepare connection to mocked database</p>
 </td>
@@ -1612,7 +1612,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>call the tested method</p>
 </td>
@@ -1623,7 +1623,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>connection to mocked DB needs to be closed properly</p>
 </td>
@@ -1631,7 +1631,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
       <tr class="section">
 	<td class="doc"><p>check if all expectations were met</p>
 </td>
@@ -1640,7 +1640,7 @@ been really met.</p>
 
 </code></pre></td>
       </tr>
-      
+
     </tbody>
   </table>
 </div>
