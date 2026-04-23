@@ -27,7 +27,8 @@ import (
 	"io"
 	"os"
 
-	zlogsentry "github.com/archdx/zerolog-sentry"
+	sentry "github.com/getsentry/sentry-go"
+	sentryzerolog "github.com/getsentry/sentry-go/zerolog"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 )
@@ -79,7 +80,12 @@ func InitLogging(config *ConfigStruct) (func(), error) {
 }
 
 func setupSentryLogging(conf SentryConfiguration) (io.WriteCloser, error) {
-	sentryWriter, err := zlogsentry.New(conf.SentryDSN, zlogsentry.WithEnvironment(conf.SentryEnvironment))
+	sentryWriter, err := sentryzerolog.New(sentryzerolog.Config{
+		ClientOptions: sentry.ClientOptions{
+			Dsn:         conf.SentryDSN,
+			Environment: conf.SentryEnvironment,
+		},
+	})
 	if err != nil {
 		return nil, err
 	}
