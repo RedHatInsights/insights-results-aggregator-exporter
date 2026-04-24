@@ -23,66 +23,30 @@ package main
 // https://redhatinsights.github.io/insights-results-aggregator-exporter/packages/logging.html
 
 import (
-	"fmt"
-	"io"
-	"os"
-
-	zlogsentry "github.com/archdx/zerolog-sentry"
-	"github.com/rs/zerolog"
-	"github.com/rs/zerolog/log"
+	"github.com/RedHatInsights/insights-operator-utils/logger"
 )
 
-// InitLogging add more writers to zerolog log object. This way the logging can be sent to
-// many targets. For the moment just STDOUT and Sentry are configured.
+// InitLogging initializes zerolog logging with stdout and optional Sentry writer.
 func InitLogging(config *ConfigStruct) (func(), error) {
-	var (
-		writers       []io.Writer
-		writeClosers  []io.WriteCloser
-		consoleWriter io.Writer
-	)
-
 	loggingConf := GetLoggingConfiguration(config)
 	sentryConf := GetSentryConfiguration(config)
 
-	stdOut := os.Stdout
-	consoleWriter = stdOut
-
-	if loggingConf.Debug {
-		// nice colored output
-		consoleWriter = zerolog.ConsoleWriter{Out: stdOut}
-	}
-
-	writers = append(writers, consoleWriter)
-
-	if sentryConf.SentryDSN != "" {
-		sentryWriter, err := setupSentryLogging(sentryConf)
-		if err != nil {
-			err = fmt.Errorf("Error initializing Sentry logging: %s", err.Error())
-			return func() {}, err
-		}
-		writers = append(writers, sentryWriter)
-		writeClosers = append(writeClosers, sentryWriter)
-	}
-
-	logsWriter := zerolog.MultiLevelWriter(writers...)
-	log.Logger = zerolog.New(logsWriter).With().Timestamp().Logger()
-
-	return func() {
-		log.Info().Msg("Closing logging writers")
-		for _, w := range writeClosers {
-			err := w.Close()
-			if err != nil {
-				log.Error().Err(err).Msg("unable to close writer")
-			}
-		}
-	}, nil
-}
-
-func setupSentryLogging(conf SentryConfiguration) (io.WriteCloser, error) {
-	sentryWriter, err := zlogsentry.New(conf.SentryDSN, zlogsentry.WithEnvironment(conf.SentryEnvironment))
+	err := logger.InitZerolog(
+		logger.LoggingConfiguration{
+			Debug:                  loggingConf.Debug,
+			LogLevel:               loggingConf.LogLevel,
+			LoggingToSentryEnabled: sentryConf.SentryDSN != "",
+		},
+		logger.CloudWatchConfiguration{},
+		logger.SentryLoggingConfiguration{
+			SentryDSN:         sentryConf.SentryDSN,
+			SentryEnvironment: sentryConf.SentryEnvironment,
+		},
+	)
 	if err != nil {
-		return nil, err
+		logger.CloseZerolog()
+		return func() {}, err
 	}
 
-	return sentryWriter, nil
+	return func() { logger.CloseZerolog() }, nil
 }
