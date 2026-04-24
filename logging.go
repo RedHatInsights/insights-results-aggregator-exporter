@@ -44,6 +44,7 @@ func InitLogging(config *ConfigStruct) (func(), error) {
 		},
 	)
 	if err != nil {
+		logger.CloseZerolog()
 		return func() {}, err
 	}
 
