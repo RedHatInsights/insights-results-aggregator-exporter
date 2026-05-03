@@ -43,7 +43,7 @@ require (
 	github.com/fsnotify/fsnotify v1.10.0 // indirect
 	github.com/getsentry/sentry-go v0.46.1 // indirect
 	github.com/getsentry/sentry-go/zerolog v0.46.1 // indirect
-	github.com/go-ini/ini v1.67.1 // indirect
+	github.com/go-ini/ini v1.67.2 // indirect
 	github.com/go-viper/mapstructure/v2 v2.5.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/hashicorp/go-uuid v1.0.3 // indirect
@@ -81,4 +81,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/go-ini/ini => gopkg.in/ini.v1 v1.67.1
+replace github.com/go-ini/ini => gopkg.in/ini.v1 v1.67.2
