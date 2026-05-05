@@ -80,7 +80,7 @@ func TableMetadataToCSV(buffer io.Writer, tableNames []TableName, storage DBStor
 
 	writer := csv.NewWriter(buffer)
 
-	err := writer.Write([]string{"Table name", "Records"})
+	err := writer.Write([]string{tableNameMsg, "Records"})
 	if err != nil {
 		log.Error().Err(err).Msg(writeOneRowToCSV)
 		return err
