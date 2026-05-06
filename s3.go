@@ -148,7 +148,7 @@ func storeTableNames(ctx context.Context, minioClient *minio.Client,
 	buffer := new(bytes.Buffer)
 
 	writer := csv.NewWriter(buffer)
-	var data = [][]string{{"Table name"}}
+	var data = [][]string{{tableNameMsg}}
 
 	err := writer.WriteAll(data)
 	if err != nil {
@@ -167,7 +167,7 @@ func storeTableNames(ctx context.Context, minioClient *minio.Client,
 	reader := io.Reader(buffer)
 
 	// store CSV data into S3/Minio
-	options := minio.PutObjectOptions{ContentType: "text/csv"}
+	options := minio.PutObjectOptions{ContentType: contentTypeCSV}
 	_, err = minioClient.PutObject(ctx, bucketName, objectName, reader, -1, options)
 	if err != nil {
 		return err
@@ -213,7 +213,7 @@ func storeDisabledRulesIntoS3(ctx context.Context, minioClient *minio.Client,
 	reader := io.Reader(buffer)
 
 	// store CSV data into S3/Minio
-	options := minio.PutObjectOptions{ContentType: "text/csv"}
+	options := minio.PutObjectOptions{ContentType: contentTypeCSV}
 	_, err = minioClient.PutObject(ctx, bucketName, objectName, reader, -1, options)
 	if err != nil {
 		return err

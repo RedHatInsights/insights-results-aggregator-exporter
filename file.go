@@ -48,7 +48,7 @@ func storeTableNamesIntoFile(fileName string, tableNames []TableName) error {
 
 	// initialize CSV writer
 	writer := csv.NewWriter(fout)
-	var data = [][]string{{"Table name"}}
+	var data = [][]string{{tableNameMsg}}
 
 	// header
 	err = writer.WriteAll(data)
