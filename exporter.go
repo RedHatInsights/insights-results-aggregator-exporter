@@ -40,6 +40,7 @@ const (
 	operationFailedMessage = "Operation failed"
 	listOfTablesMsg        = "List of tables"
 	tableNameMsg           = "Table name"
+	contentTypeCSV         = "text/csv"
 	tableIsIgnored         = "Table is ignored, skipping export"
 )
 

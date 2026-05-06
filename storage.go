@@ -470,7 +470,7 @@ func (storage DBStorage) StoreTable(ctx context.Context,
 	// https://docs.min.io/docs/golang-client-api-reference#PutObject
 	size := buffer.Len()
 
-	options := minio.PutObjectOptions{ContentType: "text/csv"}
+	options := minio.PutObjectOptions{ContentType: contentTypeCSV}
 	objectName := setObjectPrefix(prefix, string(tableName)) + CSVFileExtension
 	_, err = minioClient.PutObject(ctx, bucketName, objectName, reader, int64(size), options)
 	if err != nil {
@@ -660,7 +660,7 @@ func (storage DBStorage) StoreTableMetadataIntoS3(ctx context.Context,
 	// write CSV data into S3 bucket or Minio bucket
 	reader := io.Reader(buffer)
 
-	options := minio.PutObjectOptions{ContentType: "text/csv"}
+	options := minio.PutObjectOptions{ContentType: contentTypeCSV}
 	_, err = minioClient.PutObject(ctx, bucketName, objectName, reader, -1, options)
 	if err != nil {
 		return err
