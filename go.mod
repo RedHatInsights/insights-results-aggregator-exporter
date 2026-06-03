@@ -25,25 +25,23 @@ require (
 	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.18.26 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/configsources v1.4.26 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.7.26 // indirect
-	github.com/aws/aws-sdk-go-v2/internal/v4a v1.4.24 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/v4a v1.4.27 // indirect
 	github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.74.3 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.13.10 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.26 // indirect
-	github.com/aws/aws-sdk-go-v2/service/signin v1.0.11 // indirect
-	github.com/aws/aws-sdk-go-v2/service/sso v1.30.17 // indirect
-	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.36.0 // indirect
-	github.com/aws/aws-sdk-go-v2/service/sts v1.42.1 // indirect
+	github.com/aws/aws-sdk-go-v2/service/signin v1.1.2 // indirect
+	github.com/aws/aws-sdk-go-v2/service/sso v1.31.0 // indirect
+	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.36.3 // indirect
+	github.com/aws/aws-sdk-go-v2/service/sts v1.43.0 // indirect
 	github.com/aws/smithy-go v1.27.0 // indirect
 	github.com/buger/jsonparser v1.2.0 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/eapache/go-resiliency v1.7.0 // indirect
-	github.com/eapache/queue v1.1.0 // indirect
 	github.com/fsnotify/fsnotify v1.10.1 // indirect
 	github.com/getsentry/sentry-go v0.46.2 // indirect
 	github.com/getsentry/sentry-go/zerolog v0.46.2 // indirect
-	github.com/go-ini/ini v1.67.2 // indirect
 	github.com/go-viper/mapstructure/v2 v2.5.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/hashicorp/go-uuid v1.0.3 // indirect
@@ -78,6 +76,7 @@ require (
 	golang.org/x/net v0.55.0 // indirect
 	golang.org/x/sys v0.45.0 // indirect
 	golang.org/x/text v0.37.0 // indirect
+	gopkg.in/ini.v1 v1.67.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
