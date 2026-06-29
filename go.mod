@@ -8,7 +8,7 @@ require (
 	github.com/RedHatInsights/insights-operator-utils v1.28.0
 	github.com/lib/pq v1.12.3
 	github.com/mattn/go-sqlite3 v2.0.3+incompatible
-	github.com/minio/minio-go/v7 v7.2.0
+	github.com/minio/minio-go/v7 v7.2.1
 	github.com/redhatinsights/app-common-go v1.6.9
 	github.com/rs/zerolog v1.35.1
 	github.com/spf13/viper v1.21.0
