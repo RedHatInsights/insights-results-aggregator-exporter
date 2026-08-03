@@ -134,10 +134,10 @@ func NewStorage(configuration *StorageConfiguration) (*DBStorage, error) {
 		return nil, err
 	}
 
-	// print info about initialized driver
+	// print info about initialized driver (password redacted)
 	log.Info().
 		Str("driver", driverName).
-		Str("datasource", dataSource).
+		Str("datasource", redactDataSource(dataSource, configuration.PGPassword)).
 		Msg("Making connection to data storage")
 
 	// prepare connection to database
@@ -158,6 +158,14 @@ func NewFromConnection(connection *sql.DB, dbDriverType DBDriver, config *Storag
 		dbDriverType: dbDriverType,
 		config:       config,
 	}
+}
+
+// redactDataSource masks the database password in a connection string for logging.
+func redactDataSource(dataSource, password string) string {
+	if password == "" {
+		return dataSource
+	}
+	return strings.ReplaceAll(dataSource, password, "***")
 }
 
 // initAndGetDriver initializes driver(with logs if logSQLQueries is true),

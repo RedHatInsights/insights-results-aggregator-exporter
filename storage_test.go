@@ -30,7 +30,10 @@ import (
 	"database/sql"
 
 	"github.com/DATA-DOG/go-sqlmock"
+	"github.com/rs/zerolog"
+	"github.com/rs/zerolog/log"
 	"github.com/stretchr/testify/assert"
+	"github.com/tisnik/go-capture"
 
 	main "github.com/RedHatInsights/insights-results-aggregator-exporter"
 )
@@ -65,6 +68,24 @@ func TestNewStoragePostgreSQL(t *testing.T) {
 
 	// we just happen to make connection without trying to actually connect
 	assert.Nil(t, err)
+}
+
+// TestNewStorageDoesNotLogPassword ensures the PostgreSQL password is never
+// written to logs when establishing a storage connection (FIND-001).
+func TestNewStorageDoesNotLogPassword(t *testing.T) {
+	const password = "super-secret-pg-password"
+	cfg := testConfig
+	cfg.PGPassword = password
+
+	output, err := capture.ErrorOutput(func() {
+		log.Logger = log.Output(zerolog.New(os.Stderr))
+		_, storageErr := main.NewStorage(&cfg)
+		assert.Nil(t, storageErr)
+	})
+	checkCapture(t, err)
+
+	assert.NotContains(t, output, password)
+	assert.Contains(t, output, "***")
 }
 
 // TestNewStorageSQLite3 function tests creating new storage with logs
