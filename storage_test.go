@@ -77,6 +77,9 @@ func TestNewStorageDoesNotLogPassword(t *testing.T) {
 	cfg := testConfig
 	cfg.PGPassword = password
 
+	origLogger := log.Logger
+	t.Cleanup(func() { log.Logger = origLogger })
+
 	output, err := capture.ErrorOutput(func() {
 		log.Logger = log.Output(zerolog.New(os.Stderr))
 		_, storageErr := main.NewStorage(&cfg)
