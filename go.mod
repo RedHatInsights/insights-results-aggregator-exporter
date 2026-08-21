@@ -12,7 +12,7 @@ require (
 	github.com/redhatinsights/app-common-go v1.6.9
 	github.com/rs/zerolog v1.35.1
 	github.com/spf13/viper v1.21.0
-	github.com/stretchr/testify v1.12.0
+	github.com/stretchr/testify v1.12.1
 	github.com/tisnik/go-capture v1.0.1
 )
 
@@ -76,7 +76,6 @@ require (
 	golang.org/x/sys v0.47.0 // indirect
 	golang.org/x/text v0.41.0 // indirect
 	gopkg.in/ini.v1 v1.67.3 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
 replace github.com/go-ini/ini => gopkg.in/ini.v1 v1.67.3
