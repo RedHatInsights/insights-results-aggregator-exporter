@@ -8,7 +8,7 @@ require (
 	github.com/RedHatInsights/insights-operator-utils v1.28.0
 	github.com/lib/pq v1.12.3
 	github.com/mattn/go-sqlite3 v2.0.3+incompatible
-	github.com/minio/minio-go/v7 v7.3.0
+	github.com/minio/minio-go/v7 v7.4.1
 	github.com/redhatinsights/app-common-go v1.7.0
 	github.com/rs/zerolog v1.35.1
 	github.com/spf13/viper v1.21.0
@@ -51,7 +51,7 @@ require (
 	github.com/jcmturner/gofork v1.7.6 // indirect
 	github.com/jcmturner/gokrb5/v8 v8.4.4 // indirect
 	github.com/jcmturner/rpc/v2 v2.0.3 // indirect
-	github.com/klauspost/compress v1.20.1 // indirect
+	github.com/klauspost/compress v1.20.3 // indirect
 	github.com/klauspost/cpuid/v2 v2.4.0 // indirect
 	github.com/klauspost/crc32 v1.3.0 // indirect
 	github.com/lzap/cloudwatchwriter2 v1.6.0 // indirect
